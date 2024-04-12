@@ -1,13 +1,14 @@
 <a name="readme-top"></a>
 <div align="center">
- <img src="https://user-images.githubusercontent.com/79293287/230690583-935f9ece-4fc1-4f95-95e5-78fa5bf89b3e.png" alt="logo"><br/>
-<h3 align="center">Vanilla Javascript</h3>
+ <img src="https://github.com/tsotneforester/JSReact/assets/79293287/e61c7310-8afa-4e73-9ad7-eeb133583a1b" alt="logo"><br/>
+<h3 align="center">React Projects</h3>
   <div align="center">
 <a href="https://github.com/tsotneforester/JSVanilla/issues">🛠Submit Issue</a>
   </div>
 <br/>
 
 </div>
+
 
 <h1 align="center"> About The Project </h1> 
 
