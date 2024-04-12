@@ -1,4 +1,3 @@
-<!-- surged -->
 <h1 align="center">Carousel</h1>
 
 <!-- <div align="center">
