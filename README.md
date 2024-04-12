@@ -22,9 +22,10 @@ After first steps in Web Development (HTML+CSS), it was Javascript, which really
 - Project Name
 - Main build language  
 
-  ![css](https://img.shields.io/badge/-SCSS-3e54a3 "image")
   ![react](https://img.shields.io/badge/-React-f4cf0c "image")
   ![api](https://img.shields.io/badge/-API-aad742 "image")
+  ![redux](https://img.shields.io/badge/-Redux-DD5746 "image")
+  ![styled](https://img.shields.io/badge/-StyledI-A79277 "image")
 - Difficulty Level  
 ![newbie](https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd "image")
 ![junior](https://img.shields.io/badge/%202%20-junior-white?labelColor=aad742 "image")
