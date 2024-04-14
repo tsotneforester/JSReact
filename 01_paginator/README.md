@@ -1,16 +1,18 @@
-<h1 align="center">Carousel</h1>
+<h1 align="center">Paginator</h1>
+
+
 
 <!-- <div align="center">
-  <img src="https://gpx.ge/js/img/raw/1015_carousel.gif" alt="qr-code" />
+  <img src="https://gpx.ge/js/img/raw/1015_carousel.gif" alt="" />
 </div> -->
 
   <div align="center">
-    Built With -  <img src="https://img.shields.io/badge/-React-f4cf0c" alt="qr-code" />
+    Built With -  <img src="https://img.shields.io/badge/-React-f4cf0c" alt="" />
   
   <br/>
-    Difficulty - <img src="https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd" alt="qr-code" />
+    Difficulty - <img src="https://img.shields.io/badge/%202%20-junior-white?labelColor=aad742" alt="" />
   <br/>
-    <!-- <a href="https://carousel-tsotneforester.surge.sh/" target="_blank">🖥️ View Demo</a> -->
+  <a href="https://gpx.ge/jsreact/01_paginator/dist/" target="_blank">🖥️ View Demo</a>
     
 
   </div>
