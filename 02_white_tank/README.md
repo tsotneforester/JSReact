@@ -10,7 +10,8 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%202%20-junior-white?labelColor=aad742" alt="junior" />
   <br/>
-    <!-- <a href="https://carousel-tsotneforester.surge.sh/" target="_blank">🖥️ View Demo</a> -->
+  <a href="https://gpx.ge/jsreact/02_white_tank/dist/" target="_blank">🖥️ View Demo</a>
+
     
 
   </div>
