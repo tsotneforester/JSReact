@@ -7,7 +7,7 @@
 
   <div align="center">
     Built With -  <img src="https://img.shields.io/badge/-React-f4cf0c" alt="React" />
-    Built With -  <img src="https://img.shields.io/badge/-API-aad742" alt="API" />
+  <img src="https://img.shields.io/badge/-API-aad742" alt="API" />
   
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd" alt="" />
