@@ -1,41 +1,79 @@
 import styled from "styled-components";
-import { root, device } from "./theme";
+import React, { useState, useEffect } from "react";
 
-import { ColorFilter, CategoryFilter, ShippingFilter, ResultsFound, Products, ResetFilter, PriceFilter, StringFilter, Modal } from "./components";
+import { root } from "./theme";
+import { setData } from "./store";
+import { useDispatch, useSelector } from "react-redux";
+import data from "./data";
+
+import { ColorFilter, CategoryFilter, ShippingFilter, ResultsCountNSort, Products, ResetFilter, Modal } from "./components";
 
 function App() {
+  const dispatch = useDispatch();
+  const color = useSelector((state) => state.color);
+  const category = useSelector((state) => state.category);
+  const freeShipping = useSelector((state) => state.freeShipping);
+  const sortPattern = useSelector((state) => state.sortPattern);
+
+  useEffect(() => {
+    let filteredData = [...data];
+
+    filteredData = color ? filteredData.filter((e) => e.colors[0] == color) : filteredData;
+
+    filteredData = category ? filteredData.filter((e) => e.category == category) : filteredData;
+
+    filteredData = freeShipping ? filteredData.filter((e) => e.shipping) : filteredData;
+
+    filteredData = filteredData.sort(function (a, b) {
+      let n1 = a.name;
+      let n2 = b.name;
+      let p1 = a.price;
+      let p2 = b.price;
+      if (sortPattern == 1) {
+        return n1.localeCompare(n2);
+      } else if (sortPattern == 2) {
+        return n2.localeCompare(n1);
+      } else if (sortPattern == 3) {
+        return p1 - p2;
+      } else if (sortPattern == 4) {
+        return p2 - p1;
+      }
+    });
+
+    dispatch(setData(filteredData));
+
+    // const sliderRange = [...new Set(rawData.map((Val) => Val.price))];
+    // let [inputPrice, setInputPrice] = useState(Math.max(...sliderRange));
+
+    // filteredData = filteredData.filter((e) => {
+    //   return e.price <= inputPrice;
+    // });
+
+    // filteredData = filteredData.filter((e) => e.name.toLowerCase().indexOf(inputString.toLowerCase()) > -1);
+  }, [color, category, freeShipping, sortPattern]);
+
   return (
-    <Wrapper>
+    <>
       <S.Filters>
-        <StringFilter />
-        <PriceFilter />
+        {/* <StringFilter /> */}
+        {/* <PriceFilter /> */}
         <ColorFilter />
         <CategoryFilter />
         <ShippingFilter />
         <ResetFilter />
       </S.Filters>
-      <S.Main>
-        <ResultsFound />
+      <S.Result>
+        <ResultsCountNSort />
         <Products />
-      </S.Main>
+      </S.Result>
       <Modal />
-    </Wrapper>
+    </>
   );
 }
 
 export default App;
-const S = [];
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  @media ${device.tablet} {
-    flex-direction: row;
-  }
-`;
+const S = {};
 
 S.Filters = styled.aside`
   width: 100%;
@@ -45,18 +83,17 @@ S.Filters = styled.aside`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
-  @media ${device.mobile} {
+  @media only screen and (min-width: ${root.media.mobile}) {
     padding: 20px;
   }
-  @media ${device.tablet} {
+  @media only screen and (min-width: ${root.media.tablet}) {
     width: 390px;
-    position: sticky;
     top: 0;
     padding: 20px;
   }
 `;
 
-S.Main = styled.div`
+S.Result = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +103,7 @@ S.Main = styled.div`
   width: 100%;
   position: relative;
   padding: 10px;
-  @media ${device.mobile} {
+  @media only screen and (min-width: ${root.media.mobile}) {
     padding: 20px;
   }
 `;

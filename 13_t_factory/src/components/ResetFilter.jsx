@@ -1,24 +1,14 @@
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import React, { useContext } from "react";
-import { DataContext } from "../Context";
-import { FilterContext } from "../Context";
-import { SortContext } from "../Context";
+import { reset } from "../store";
 
 function ResetFilter() {
-  const { sliderRange } = useContext(DataContext);
-
-  const { setInputString, setInputPrice, setInputColor, setInputCategory, setInputFreeShipping } = useContext(FilterContext);
-  const { setSortPattern } = useContext(SortContext);
+  const dispatch = useDispatch();
 
   return (
     <S.Button
       onClick={() => {
-        setInputFreeShipping(false);
-        setInputString("");
-        setInputPrice(Math.max(...sliderRange));
-        setInputColor("all");
-        setInputCategory("all");
-        setSortPattern(false);
+        dispatch(reset());
       }}>
       Clear Filters
     </S.Button>

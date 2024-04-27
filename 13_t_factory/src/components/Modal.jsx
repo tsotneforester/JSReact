@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
-import { DataContext } from "../Context";
+import { setShowModal } from "../store";
+import { useDispatch, useSelector } from "react-redux";
 
 function Modal() {
-  const { modalOpened, setModalOpened, activeProduct } = useContext(DataContext);
+  const dispatch = useDispatch();
+  const showModal = useSelector((state) => state.showModal);
+  const activeProduct = useSelector((state) => state.activeProduct);
+
   return (
-    modalOpened && (
-      <S.Modal>
-        <div className="overlay" onClick={() => setModalOpened(false)}></div>
+    showModal && (
+      <S.Container>
+        <div className="overlay" onClick={() => dispatch(setShowModal({ show: false, product: null }))}></div>
         <img src={`https://gpx.ge/root/img/tfactory/raw/${activeProduct}`} alt="" />
-      </S.Modal>
+      </S.Container>
     )
   );
 }
@@ -18,7 +21,7 @@ export default Modal;
 
 const S = {};
 
-S.Modal = styled.div`
+S.Container = styled.div`
   width: 100%;
   height: 100vh;
   position: fixed;

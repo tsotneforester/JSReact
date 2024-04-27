@@ -7,7 +7,7 @@ export default [
     colors: ["#00A1D1"],
     artist: "tsotneforester",
     shipping: true,
-    category: "millitary",
+    category: "military",
   },
   {
     id: 102,

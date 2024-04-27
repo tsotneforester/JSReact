@@ -1,33 +1,25 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { ReactComponent as StoreSVG } from "../assets/storefront.svg";
+import StoreSVG from "../assets/store.svg?react";
 import ExpandSVG from "../assets/expand.svg";
-import { root, device } from "../theme";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import { DataContext } from "../Context";
-import { formatPrice } from "../Functions";
+
+import { setShowModal } from "../store";
+import { useDispatch } from "react-redux";
 
 const ProductCard = ({ data }) => {
-  const { setActiveProduct, setModalOpened } = useContext(DataContext);
+  const dispatch = useDispatch();
 
   return data.map((e) => {
     let { id, image, name, price, artist } = e;
 
     return (
-      <Wrapper key={id}>
+      <S.Container key={id}>
         <div
           className="thumbnail"
           onClick={() => {
-            setModalOpened(true);
-            setActiveProduct(image);
+            dispatch(setShowModal({ show: true, product: image }));
           }}>
-          <LazyLoadImage
-            src={`https://gpx.ge/root/img/tfactory/raw/${image}`}
-            placeholderSrc={`https://gpx.ge/root/img/tfactory/placeholder/1.png${image}`} //
-            effect="blur"
-            alt="name"
-          />
+          <img src={`https://gpx.ge/root/img/tfactory/raw/${image}`} alt="name" />
 
           <div className="artist">
             <StoreIcon /> by {artist}
@@ -35,24 +27,23 @@ const ProductCard = ({ data }) => {
         </div>
         <footer>
           <h1>
-            {/* {id}- */}
+            {/* {id} */}
             {name}
           </h1>
           <h2>{formatPrice(price)}</h2>
         </footer>
-      </Wrapper>
+      </S.Container>
     );
   });
 };
 
-const Wrapper = styled.article`
+export default ProductCard;
+const S = {};
+
+S.Container = styled.article`
   width: 100%;
   max-width: 360px;
   height: auto;
-  @media ${device.mobile} {
-  }
-  @media ${device.tablet} {
-  }
 
   .thumbnail {
     position: relative;
@@ -60,15 +51,16 @@ const Wrapper = styled.article`
     width: 100%;
     overflow: hidden;
     cursor: pointer;
+
     &::after {
       position: absolute;
       top: 0;
       left: 0;
-      content: url(${ExpandSVG});
       background-color: #a0a0a06f;
-      z-index: 1;
+      z-index: 0;
       width: 100%;
       height: 100%;
+      content: url(${ExpandSVG});
       opacity: 0;
       display: flex;
       justify-content: center;
@@ -123,8 +115,6 @@ const Wrapper = styled.article`
     gap: 12px;
     padding: 6px 0;
     transition: all 0.2s;
-    @media ${device.mobile} {
-    }
   }
 
   h1 {
@@ -150,6 +140,14 @@ const Wrapper = styled.article`
 
 const StoreIcon = styled(StoreSVG)`
   width: 36px;
+  path {
+    fill: #bbdc56;
+  }
 `;
 
-export default ProductCard;
+const formatPrice = (number) => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(number);
+};

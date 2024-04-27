@@ -1,20 +1,23 @@
-import React, { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { FilterContext } from "../Context";
+import { setShipping } from "../store";
 
 function ShippingFilter() {
-  const { inputFreeShipping, setInputFreeShipping } = useContext(FilterContext);
+  const dispatch = useDispatch();
+  const freeShipping = useSelector((state) => state.freeShipping);
+
   return (
-    <Wrapper>
+    <S.Container>
       <label htmlFor="ship">Free Shipping</label>
-      <input id="ship" type="checkbox" checked={inputFreeShipping} onChange={(e) => setInputFreeShipping(!inputFreeShipping)} />
-    </Wrapper>
+      <input id="ship" type="checkbox" checked={freeShipping} onChange={() => dispatch(setShipping())} />
+    </S.Container>
   );
 }
 
 export default ShippingFilter;
 
-const Wrapper = styled.div`
+const S = {};
+S.Container = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 12px;

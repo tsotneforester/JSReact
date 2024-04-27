@@ -1,40 +1,39 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import rawData from "../data";
-import { FilterContext } from "../Context";
+import data from "../data";
+import { setCategory } from "../store";
+import { useDispatch, useSelector } from "react-redux";
 
 function CategoryFilter() {
-  let arrRaw = [...new Set(rawData.map((Val) => Val.category))];
-  let arr = arrRaw.filter((e) => e); //filter out empty category
-  arr.unshift("all");
-  const { inputCategory, setInputCategory } = useContext(FilterContext);
-  let ind = arr.indexOf(inputCategory);
+  const categories = [...new Set(data.map((e) => e.category).filter((e) => e))];
+
+  const dispatch = useDispatch();
+  const index = useSelector((state) => state.categoryIndex);
 
   return (
-    <Wrapper>
+    <S.Container>
       <h1>Categoty</h1>
       <div className="categories">
-        {arr.map((e, i) => {
+        {categories.map((e, i) => {
           return (
             <h2
               key={i}
-              onClick={(e) => {
-                setInputCategory(e.target.dataset.category);
+              onClick={() => {
+                dispatch(setCategory({ category: e, index: i }));
               }}
-              className={ind == i ? "active" : undefined}
-              data-category={e}>
+              className={index == i ? "active" : undefined}>
               {e}
             </h2>
           );
         })}
       </div>
-    </Wrapper>
+    </S.Container>
   );
 }
 
 export default CategoryFilter;
-
-const Wrapper = styled.div`
+const S = {};
+S.Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
