@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect, useCallback, useMemo } from "react";
+import { root } from "../styled";
 import { useForm } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import styled from "styled-components";
@@ -17,11 +18,13 @@ import { FormHelperText } from "@mui/material";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import Alert from "@mui/material/Alert";
 
+import { styledFormContainer, styledLink } from "../styled";
+
 import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = React.useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [myError, setMyError] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -56,11 +59,18 @@ export default function Login() {
       setMyError(error.message);
     }
   }
+  useEffect(() => {
+    console.log("gsignup rendered");
+
+    if (sessionStorage.getItem("token")) {
+      sessionStorage.removeItem("token");
+    }
+  }, []);
 
   return (
     <S.Container role="signup">
-      <S.H1>Create New Account</S.H1>
-      <S.Form onSubmit={handleSubmit((data) => handleSubmit1(data))}>
+      <h1>Create New Account</h1>
+      <form onSubmit={handleSubmit((data) => handleSubmit1(data))}>
         <TextField
           {...register("fullName", {
             required: "Full name is required",
@@ -68,7 +78,7 @@ export default function Login() {
           label="Full name"
           placeholder="Enter your name"
           variant="outlined"
-          defaultValue={"tsotnektulu"}
+          // defaultValue={"tsotnektulu"}
           error={errors.email?.type ? true : false}
           helperText={errors.email?.message}
         />
@@ -83,7 +93,7 @@ export default function Login() {
           label="Email"
           placeholder="Enter your email"
           variant="outlined"
-          defaultValue={"tsotne.meladze@gmail.com"}
+          // defaultValue={"tsotne.meladze@gmail.com"}
           error={errors.email?.type ? true : false}
           helperText={errors.email?.message}
         />
@@ -129,13 +139,13 @@ export default function Login() {
           <FormHelperText>{errors.password2?.message}</FormHelperText>
         </FormControl>
 
-        <Button sx={{ padding: "14px 10px" }} startIcon={<LockOpenIcon />} size="large" type="submit" variant="contained">
+        <Button sx={{ padding: root.button_padding }} startIcon={<LockOpenIcon />} size="large" type="submit" variant="contained">
           Sign Up
         </Button>
-      </S.Form>
-      <S.H2>
+      </form>
+      <h2>
         Already have an account? <S.Link to="/">Log In</S.Link>
-      </S.H2>
+      </h2>
       {myError && (
         <Alert sx={{ marginTop: "10px" }} severity="error">
           {myError}
@@ -148,48 +158,13 @@ export default function Login() {
 const S = {};
 
 S.Container = styled.div`
-  width: 100%;
-  min-height: 100svh;
-  max-width: 352px;
-  border-radius: 0;
-  background-color: transparent;
-  display: flex;
-  flex-flow: column nowrap;
+  ${styledFormContainer}
   justify-content: flex-start;
-  padding-top: 78px;
-  align-items: center;
-`;
-
-S.H1 = styled.h1`
-  margin-bottom: 34px;
-  color: #1e1a50;
-  font-size: 24px;
-  font-weight: 500;
-  text-align: center;
-`;
-
-S.H2 = styled.h1`
-  color: #767e96;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 25px;
-  text-align: center;
-  margin-top: 6px;
+  h1 {
+    margin-top: 62px;
+  }
 `;
 
 S.Link = styled(Link)`
-  color: #328bf3;
-  font-weight: 700;
-`;
-S.Form = styled.form`
-  /* height: 336px; */
-
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 88px 88px 88px 88px max-content;
-  width: 100%;
-
-  input {
-    width: 100%;
-  }
+  ${styledLink}
 `;

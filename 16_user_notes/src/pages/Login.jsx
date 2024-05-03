@@ -1,4 +1,6 @@
 import React, { useState, useContext, useEffect, useCallback, useMemo } from "react";
+
+import { root } from "../styled";
 import { useForm } from "react-hook-form";
 import TextField from "@mui/material/TextField";
 import styled from "styled-components";
@@ -15,9 +17,11 @@ import FilledInput from "@mui/material/FilledInput";
 import FormControl from "@mui/material/FormControl";
 import { FormHelperText } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { setToken } from "../store";
+
 import Alert from "@mui/material/Alert";
 import CheckIcon from "@mui/icons-material/Check";
+
+import { styledFormContainer, styledLink } from "../styled";
 
 import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate } from "react-router-dom";
 
@@ -30,7 +34,6 @@ export default function Login() {
     event.preventDefault();
   };
 
-  const token = useSelector((state) => state.token);
   const dispatcher = useDispatch();
 
   const {
@@ -47,17 +50,26 @@ export default function Login() {
       });
 
       if (error) throw new Error(error);
-      dispatcher(setToken(data));
+      sessionStorage.setItem("token", JSON.stringify(data));
+      // dispatcher(setToken(data));
       navigate("/homepage");
     } catch (err) {
       setMyError(err.message);
     }
   }
 
+  useEffect(() => {
+    console.log("login rendered");
+
+    if (sessionStorage.getItem("token")) {
+      navigate("/homepage");
+    }
+  }, []);
+
   return (
     <S.Container role="login">
-      <S.H1>Sign In to your account</S.H1>
-      <S.Form onSubmit={handleSubmit((data) => handleSubmit1(data))}>
+      <h1>Sign In to your account</h1>
+      <form onSubmit={handleSubmit((data) => handleSubmit1(data))}>
         <TextField
           {...register("email", {
             required: "Email Address is required",
@@ -69,28 +81,11 @@ export default function Login() {
           label="Email"
           placeholder="Enter your email"
           variant="outlined"
-          defaultValue={"tsotne.meladze@gmail.com"}
+          // defaultValue={""}
           error={errors.email?.type ? true : false}
           helperText={errors.email?.message}
         />
 
-        {/* <TextField
-          {...register("password", {
-            required: "Password is required",
-            pattern: {
-              value: /.{6,}/,
-              message: "Minimum 6 chars",
-            },
-          })}
-          type="password"
-          //type={showPassword ? "text" : "password"}
-
-          variant="outlined"
-          error={errors.password?.type ? true : false}
-          helperText={errors.password?.message}
-          label="Create password"
-          placeholder="Create password"
-        /> */}
         <FormControl variant="outlined" error={errors.password?.type ? true : false}>
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
@@ -111,18 +106,19 @@ export default function Login() {
             }
             label="Password"
             placeholder="Enter your password"
+            // defaultValue={}
             type={showPassword ? "text" : "password"}
           />
           <FormHelperText>{errors.password?.message}</FormHelperText>
         </FormControl>
 
-        <Button sx={{ padding: "14px 10px" }} endIcon={<LoginIcon />} color={Object.keys(errors).length > 0 ? "error" : "success"} size="large" type="submit" variant="contained">
+        <Button sx={{ padding: root.button_padding }} endIcon={<LoginIcon />} color={Object.keys(errors).length > 0 ? "error" : "success"} size="large" type="submit" variant="contained">
           Log In
         </Button>
-      </S.Form>
-      <S.H2>
+      </form>
+      <h2>
         Don’t have an account? <S.Link to="/signup">Sign Up</S.Link>
-      </S.H2>
+      </h2>
       {myError && (
         <Alert sx={{ marginTop: "10px" }} severity="error">
           {myError}
@@ -135,46 +131,10 @@ export default function Login() {
 const S = {};
 
 S.Container = styled.div`
-  width: 100%;
-  min-height: 100svh;
-  max-width: 352px;
-  border-radius: 0;
-  background-color: transparent;
-  display: flex;
-  flex-flow: column nowrap;
+  ${styledFormContainer}
   justify-content: center;
-  align-items: center;
-`;
-
-S.H1 = styled.h1`
-  margin-bottom: 70px;
-  color: #1e1a50;
-  font-size: 24px;
-  font-weight: 500;
-  text-align: center;
-`;
-
-S.H2 = styled.h2`
-  color: #767e96;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 25px;
-  text-align: center;
-  margin-top: 6px;
 `;
 
 S.Link = styled(Link)`
-  color: #328bf3;
-  font-weight: 700;
-`;
-S.Form = styled.form`
-  height: 234px;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 88px 88px max-content;
-  width: 100%;
-
-  input {
-    width: 100%;
-  }
+  ${styledLink}
 `;
