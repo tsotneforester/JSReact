@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { root, defaultInput } from "../theme";
 import styled from "styled-components";
-import { ReactComponent as Close } from "../assets/close-outline.svg";
+import Close from "../assets/close-outline.svg?react";
 
 function Select({ data, setFromCur, curr, children }) {
   const [filtered, setFiltered] = useState({});

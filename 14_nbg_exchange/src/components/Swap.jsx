@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { root } from "../theme";
 
-import { ReactComponent as SwapSvg } from "../assets/swap.svg";
+import SwapSvg from "../assets/swap.svg?react";
 
 function Swap({ handler }) {
   return (

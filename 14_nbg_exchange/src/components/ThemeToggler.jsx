@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import { root } from "../theme";
-import { ReactComponent as MoonIcon } from "../assets/moon.svg";
-import { ReactComponent as SunIcon } from "../assets/sun.svg";
+import MoonIcon from "../assets/moon.svg?react";
+import SunIcon from "../assets/sun.svg?react";
 import { AppContext } from "../Context";
 import { motion } from "framer-motion";
 

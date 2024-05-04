@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { root, defaultInput } from "../theme";
 
-import { ReactComponent as SunSvg } from "../assets/calendar-outline.svg";
+import SunSvg from "../assets/calendar-outline.svg?react";
 
 function Calendar({ date, setDate }) {
   return (
@@ -32,7 +32,6 @@ const Container = styled.div`
     font-size: 16px;
     width: 100%;
     flex-grow: 1;
-    
   }
 
   & span {
