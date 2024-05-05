@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Nbg from "../assets/nbg.svg";
-import Lines from "../assets/lines.svg";
-
 function Header() {
   return <Container></Container>;
 }
@@ -16,7 +13,7 @@ const Container = styled.div`
   left: 0;
 
   background-color: #081233;
-  background-image: url(${Nbg}), url(${Lines});
+  background-image: url("assets/nbg.svg"), url("assets/lines.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: clamp(216px, 50%, 390px), cover;
   background-position: 10px 10px, 0% 0%;

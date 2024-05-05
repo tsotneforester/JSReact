@@ -67,7 +67,7 @@ function App() {
           tempData[i].currencySymbol = "€";
         }
       }
-
+      console.log(tempData);
       setData(tempData);
 
       let fromRate =
@@ -113,7 +113,7 @@ function App() {
       <Header />
       <Container>
         <Available />
-        <Calendar date={date} setDate={setDate} />
+        <Calendar />
         <Select data={data} setFromCur={setFromCur} curr={fromCur}>
           <InputAmount amount={amount.string} setter={setAmount} />
         </Select>

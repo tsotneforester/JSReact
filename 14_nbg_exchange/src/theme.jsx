@@ -30,6 +30,18 @@ export const GlobalStyles = createGlobalStyle`
     color: ${(prop) => prop.theme.text};
     transition: background ${root.animation_time}, color ${root.animation_time};
   }
+
+  #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+
+
 `;
 
 export const defaultInput = css`

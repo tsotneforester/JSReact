@@ -5,7 +5,7 @@ import axios from "axios";
 import moment from "moment";
 import styled, { ThemeProvider } from "styled-components";
 
-let url = "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json/";
+import { url } from "./data";
 
 function Context({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,10 +28,8 @@ function Context({ children }) {
   return (
     <AppContext.Provider value={{ isDarkMode, setIsDarkMode, dateAvailable, date, setDate }}>
       <ThemeProvider theme={isDarkMode ? dark : light}>
-        <>
-          <GlobalStyles />
-          {children}
-        </>
+        <GlobalStyles />
+        {children}
       </ThemeProvider>
     </AppContext.Provider>
   );

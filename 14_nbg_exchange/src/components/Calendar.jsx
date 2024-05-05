@@ -1,10 +1,12 @@
-import React from "react";
 import styled from "styled-components";
 import { root, defaultInput } from "../theme";
+import React, { useState, useContext, useEffect, useCallback, useMemo } from "react";
+import { AppContext } from "../Context";
 
 import SunSvg from "../assets/calendar-outline.svg?react";
 
-function Calendar({ date, setDate }) {
+function Calendar() {
+  const { date, setDate } = useContext(AppContext);
   return (
     <>
       <Container>
