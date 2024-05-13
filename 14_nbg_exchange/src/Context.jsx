@@ -23,6 +23,8 @@ function Context({ children }) {
 
   useEffect(() => {
     dataAvailableTill();
+    const storedTheme = localStorage.getItem("darkTheme");
+    setIsDarkMode(storedTheme === "true");
   }, []);
 
   return (

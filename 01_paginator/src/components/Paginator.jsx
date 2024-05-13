@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import dateFormat from "dateformat";
-import { root, device } from "../theme";
+import { root } from "../theme";
 
 function Paginator({ data, singlePageLines }) {
   let [activePage, setActivePage] = useState(1);
@@ -79,10 +79,10 @@ function Dots() {
 }
 
 let constants = {
-  active: (prop) => prop.theme.active,
-  text: (prop) => prop.theme.text,
-  bg: (prop) => prop.theme.bg,
-  time: root.animationTime,
+  active: root.color.active,
+  text: root.color.text,
+  bg: root.color.bg,
+  time: root.color.animationTime,
   padding: "8px 12px",
 };
 
@@ -118,7 +118,7 @@ const Table = styled.table`
     &:nth-child(3) {
       display: none;
 
-      @media ${device.tablet} {
+      @media only screen and (min-width: ${root.media.tablet}px) {
         display: block;
       }
     }
@@ -136,7 +136,7 @@ const Table = styled.table`
     &:nth-child(3) {
       display: none;
 
-      @media ${device.tablet} {
+      @media only screen and (min-width: ${root.media.tablet}px) {
         display: flex;
       }
     }
@@ -159,7 +159,8 @@ const Footer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  @media ${device.tablet} {
+
+  @media only screen and (min-width: ${root.media.tablet}px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

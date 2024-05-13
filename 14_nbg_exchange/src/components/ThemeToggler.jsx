@@ -9,6 +9,12 @@ import { motion } from "framer-motion";
 function ThemeToggler() {
   const { isDarkMode, setIsDarkMode } = useContext(AppContext);
 
+  function toggleTheme() {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    localStorage.setItem("darkTheme", newTheme);
+  }
+
   return (
     <>
       <Container
@@ -20,8 +26,8 @@ function ThemeToggler() {
           damping: 20,
         }}>
         <Icons rotate={isDarkMode ? "180" : "0"}>
-          <Moon onClick={() => setIsDarkMode(!isDarkMode)} />
-          <Sun onClick={() => setIsDarkMode(!isDarkMode)} />
+          <Moon onClick={() => toggleTheme()} />
+          <Sun onClick={() => toggleTheme()} />
         </Icons>
       </Container>
     </>
