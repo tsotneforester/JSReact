@@ -20,3 +20,4 @@
 *.ini
 *.code-workspace
 *.eslintrc
+**/ASSETS
