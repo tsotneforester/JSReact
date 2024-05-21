@@ -12,20 +12,16 @@
 
 <h1 align="center"> About The Project </h1> 
 
-_**"The root of learning is bitter, but the crown is sweet"**_.... - Ancient Georgian ( 🏹 ქართული ⚔) proverb.
 
-After first steps in Web Development (HTML+CSS), it was Javascript, which really drove my nuts, but now thing are getting better as experience growth. On my Js journey, I've come up to many interesting tasks and I am going to share it to you! :partying_face::partying_face::partying_face:
+After first steps in Web Development (HTML+CSS), it was Javascript, which really drove my nuts, but now thing are getting better as experience growth. On my Js journey, I've come up to **React**, one of the best framworks that eased thing a great deal
 
 ## Getting Started
 
-- Project GIF
-- Project Name
+
 - Main build tools  
 
   ![react](https://img.shields.io/badge/-React-f4cf0c "image")
   ![api](https://img.shields.io/badge/-API-aad742 "image")
-  ![redux](https://img.shields.io/badge/-Redux-DD5746 "image")
-  ![styled](https://img.shields.io/badge/-Styled-A79277 "image")
 - Difficulty Level  
 ![newbie](https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd "image")
 ![junior](https://img.shields.io/badge/%202%20-junior-white?labelColor=aad742 "image")
@@ -33,7 +29,7 @@ After first steps in Web Development (HTML+CSS), it was Javascript, which really
 ![advanced](https://img.shields.io/badge/%204%20-advanced-white?labelColor=bf4605 "image")
 <!-- ![guru](https://img.shields.io/badge/%205%20-guru-white?labelColor=ed2c49 "image") -->
 
-- Summery
+- Summary
 
 
 
@@ -41,17 +37,11 @@ After first steps in Web Development (HTML+CSS), it was Javascript, which really
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skills.thijs.gg/icons?i=js,html,css,sass,styledcomponents,react,redux,regex,codepen,figma,git,ps,vscode" />
+    <img src="https://skillicons.dev/icons?i=js,html,css,sass,styledcomponents,react,redux,regex,codepen,figma,git,ps,vscode" />
   </a>
 </p>
 
-### Prerequisites
 
-npm
-
-```sh
-npm install npm@latest -g
-```
 
 ### Installation & Usage
 
@@ -63,9 +53,3 @@ npm install npm@latest -g
   ```sh
   npm run dev
   ```
-
-
-
-<!-- ## About Me
-
-[![Top Langs](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tsotneforester&theme=github_dark)](https://github.com/anuraghazra/github-readme-stats) -->
