@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Navbar, Logo, List, Social, ListContainer, ListItem } from "./Styled";
+import { Navbar, Logo, List, Social, ListContainer, ListItem } from "../Styled";
 
 function Header() {
   const [showLinks, setShowLinks] = useState(false);

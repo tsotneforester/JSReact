@@ -80,3 +80,16 @@ pre {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body {
+  background-color: #dbe9ff;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  row-gap: 30px;
+  align-items: center;
+}
