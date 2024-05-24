@@ -1,15 +1,57 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { root } from "../theme";
-import { sort } from "../store";
+
+import { useNavigate, useSearchParams } from "react-router-dom";
+
+const sordData = [
+  {
+    name: "default",
+    textNode: "Sort: Default",
+  },
+  {
+    name: "name/asc",
+    textNode: "Name (A-Z)",
+  },
+
+  {
+    name: "name/des",
+    textNode: "Name (Z-A)",
+  },
+  {
+    name: "price/asc",
+    textNode: "Price (Lowest)",
+  },
+  {
+    name: "price/des",
+    textNode: "Price (Highest)",
+  },
+];
 
 function ResultsCountNSort() {
-  const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
+  const navigate = useNavigate();
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   function handler(e) {
-    dispatch(sort(e.target.value));
+    const params = new URLSearchParams(searchParams);
+
+    if (e.target.value == "default") {
+      params.delete("sort");
+      params.delete("order");
+      setSearchParams(params);
+      navigate(`/?${params.toString()}`);
+      return;
+    }
+    const [sortName, sortOrder] = e.target.value.split("/");
+    params.set("sort", sortName);
+    params.set("order", sortOrder);
+    setSearchParams(params);
+    navigate(`/?${params.toString()}`);
   }
+
+  const currentSort = Boolean(searchParams.get("sort")) ? `${searchParams.get("sort")}/${searchParams.get("order")}` : "default";
 
   return (
     <Wrapper>
@@ -17,14 +59,14 @@ function ResultsCountNSort() {
       <div className="line"></div>
       <div className="sorter">
         <form>
-          <select onChange={handler} required>
-            <option value="" disabled selected hidden>
-              Sort By
-            </option>
-            <option value="1">Name (A-Z)</option>
-            <option value="2">Name (Z-A)</option>
-            <option value="3">Price (Lowest)</option>
-            <option value="4">Price (Highest)</option>
+          <select value={currentSort} onChange={handler} required>
+            {sordData.map((e, i) => {
+              return (
+                <option key={i} value={e.name}>
+                  {e.textNode}
+                </option>
+              );
+            })}
           </select>
         </form>
       </div>

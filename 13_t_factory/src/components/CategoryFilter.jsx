@@ -1,14 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import data from "../data";
-import { setCategory } from "../store";
-import { useDispatch, useSelector } from "react-redux";
+
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function CategoryFilter() {
   const categories = [...new Set(data.map((e) => e.category).filter((e) => e))];
 
-  const dispatch = useDispatch();
-  const index = useSelector((state) => state.categoryIndex);
+  const navigate = useNavigate();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const currentCategory = searchParams.get("category") || "";
+
+  function handler(e) {
+    const params = new URLSearchParams(searchParams);
+    if (searchParams.get("category") == e) {
+      params.delete("category");
+      setSearchParams(params);
+      navigate(`/?${params.toString()}`);
+      return;
+    }
+
+    params.set("category", e);
+    setSearchParams(params);
+    navigate(`/?${params.toString()}`);
+  }
 
   return (
     <S.Container>
@@ -16,12 +32,7 @@ function CategoryFilter() {
       <div className="categories">
         {categories.map((e, i) => {
           return (
-            <h2
-              key={i}
-              onClick={() => {
-                dispatch(setCategory({ category: e, index: i }));
-              }}
-              className={index == i ? "active" : undefined}>
+            <h2 key={i} onClick={() => handler(e)} className={currentCategory == e ? "active" : undefined}>
               {e}
             </h2>
           );

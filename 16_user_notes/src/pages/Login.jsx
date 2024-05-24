@@ -13,7 +13,6 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import LoginIcon from "@mui/icons-material/Login";
 import IconButton from "@mui/material/IconButton";
 import OutlinedInput from "@mui/material/OutlinedInput";
-import FilledInput from "@mui/material/FilledInput";
 import FormControl from "@mui/material/FormControl";
 import { FormHelperText } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
@@ -87,7 +86,7 @@ export default function Login() {
         />
 
         <FormControl variant="outlined" error={errors.password?.type ? true : false}>
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-password">Passwosrd</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
             {...register("password", {

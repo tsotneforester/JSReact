@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate, Navigate } fr
 import Homepage from "./pages/Homepage";
 import { useSelector, useDispatch } from "react-redux";
 import { setTempTaskData } from "./noteSlice";
+import ThemeToggler from "./components/ThemeToggler";
 // import { root } from "./styled";
 
 //imrse
@@ -37,12 +38,15 @@ function App() {
   }, [category, taskData, searchText]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Login />}></Route>
-      <Route path="/signup" element={<Signup />}></Route>
-      <Route path="/homepage" element={<Homepage />}></Route>
-      {/* <Route path="*" element={<Error />}></Route> */}
-    </Routes>
+    <>
+      {/* <ThemeToggler /> */}
+      <Routes>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/homepage" element={<Homepage />}></Route>
+        {/* <Route path="*" element={<Error />}></Route> */}
+      </Routes>
+    </>
   );
 }
 

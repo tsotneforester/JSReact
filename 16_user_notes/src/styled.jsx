@@ -1,8 +1,14 @@
 import { css } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { grey } from "@mui/material/colors";
+import { lighten } from "@mui/material";
 
 export const root = {
+  theme_icon_size: "40px",
+  animation_time: "0.6s",
+  border: "#d4cbcb",
+  border_radius: "20px",
+
   button_padding: "14px 10px",
   card_max_width: "412px",
   color: {
@@ -14,6 +20,37 @@ export const root = {
     laptop: 1024,
     desktop: 1280,
   },
+  theme: {
+    dark: {
+      text: "#f1f1f1",
+      body: "#011719f8",
+      shadow: "black",
+      theme_icon: "#f1f1f1",
+      disabled: "#b4b4b4",
+    },
+    light: {
+      text: "#002855",
+      body: "#e3fdff82",
+      shadow: "#9e9e9e",
+      theme_icon: "#090808",
+      disabled: "#555252",
+    },
+  },
+};
+
+export const light = {
+  body: "#e3fdff82",
+  text: "#002855",
+  shadow: "#9e9e9e",
+  theme_icon: "#090808",
+  disabled: "#555252",
+};
+export const dark = {
+  body: "#121620",
+  text: "#f1f1f1",
+  shadow: "black",
+  theme_icon: "#f1f1f1",
+  disabled: "#b4b4b4",
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -28,7 +65,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #e3fdff82;
+  background-color: ${(prop) => prop.theme.body};
+ 
   background-image: url("/assets/bg1.png"), url("/assets/bg2.svg");
   background-repeat: repeat, no-repeat; 
   background-position: 0% 0%, 0% 100%;
@@ -76,18 +114,19 @@ export const styledFormContainer = css`
 
   h1 {
     margin-bottom: 70px;
-    color: #1e1a50;
+    color: ${(prop) => prop.theme.text};
     font-size: 24px;
     font-weight: 500;
     text-align: center;
   }
   h2 {
-    color: #767e96;
+    color: ${(prop) => prop.theme.text};
     font-size: 14px;
     font-weight: 500;
     line-height: 25px;
     text-align: center;
     margin-top: 6px;
+    opacity: 0.5;
   }
 
   form {

@@ -1,15 +1,9 @@
-import WorkIcon from "@mui/icons-material/Work";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import LiveTvIcon from "@mui/icons-material/LiveTv";
-
 export const CATEGORIES = {
-  biography: [<CalendarMonthIcon fontSize="large" />, "#926306"],
-  work: [<WorkIcon fontSize="large" />, "#a303ff"],
-  read: [<MenuBookIcon fontSize="large" />, "#266d55"],
-  cart: [<AddShoppingCartIcon fontSize="large" />, "#433a18"],
-  watch: [<LiveTvIcon fontSize="large" />, "#6e460f"],
+  biography: [<box-icon size="md" color="#444d44" type="solid" name="calendar"></box-icon>, "#926306"],
+  work: [<box-icon size="md" color="#444d44" type="solid" name="briefcase-alt-2"></box-icon>, "#a303ff"],
+  read: [<box-icon size="md" color="#444d44" name="book-reader"></box-icon>, "#266d55"],
+  cart: [<box-icon size="md" color="#444d44" name="cart-add"></box-icon>, "#433a18"],
+  watch: [<box-icon size="md" color="#444d44" name="camera-movie"></box-icon>, "#6e460f"],
 };
 
 export const EMPTYFORM = { title: "", category: "", desc: "" };

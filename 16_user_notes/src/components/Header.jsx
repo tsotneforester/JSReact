@@ -22,6 +22,7 @@ export default function Header({ token }) {
   return (
     <S.Header>
       <h1>Welcome, {userName}</h1>
+      <box-icon name="rocket" color="white"></box-icon>
       <Button variant="contained" color="warning" onClick={handleLogout}>
         Logout
       </Button>

@@ -6,7 +6,7 @@ export default [
     image: "1.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "military",
   },
   {
@@ -16,7 +16,7 @@ export default [
     image: "2.png",
     colors: ["#003929"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -26,7 +26,7 @@ export default [
     image: "3.png",
     colors: ["#0D2942"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "cartoon",
   },
   {
@@ -36,7 +36,7 @@ export default [
     image: "4.png",
     colors: ["#E9DB56"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "military",
   },
   {
@@ -46,7 +46,7 @@ export default [
     image: "5.png",
     colors: ["#0D2942"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -56,7 +56,7 @@ export default [
     image: "6.png",
     colors: ["#2658B8"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "",
   },
   {
@@ -66,7 +66,7 @@ export default [
     image: "7.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "",
   },
   {
@@ -76,7 +76,7 @@ export default [
     image: "8.png",
     colors: ["#00A1D1"],
     artist: "dom and jquerry",
-    shipping: true,
+    freeShipping: true,
     category: "cartoon",
   },
   {
@@ -86,7 +86,7 @@ export default [
     image: "9.png",
     colors: ["#003929"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -96,7 +96,7 @@ export default [
     image: "10.png",
     colors: ["#D8520D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -106,7 +106,7 @@ export default [
     image: "11.png",
     colors: ["#E9DB56"],
     artist: "fridoni",
-    shipping: false,
+    freeShipping: false,
     category: "celebs",
   },
   {
@@ -116,7 +116,7 @@ export default [
     image: "12.png",
     colors: ["#0D2942"],
     artist: "crambooo",
-    shipping: true,
+    freeShipping: true,
     category: "cartoon",
   },
   {
@@ -126,7 +126,7 @@ export default [
     image: "13.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -136,7 +136,7 @@ export default [
     image: "14.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "celebs",
   },
   {
@@ -146,7 +146,7 @@ export default [
     image: "15.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "",
   },
   {
@@ -156,7 +156,7 @@ export default [
     image: "16.png",
     colors: ["#5B489D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -166,7 +166,7 @@ export default [
     image: "17.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -176,7 +176,7 @@ export default [
     image: "18.png",
     colors: ["#D60027"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "",
   },
   {
@@ -186,7 +186,7 @@ export default [
     image: "19.png",
     colors: ["#524025"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "",
   },
   {
@@ -196,7 +196,7 @@ export default [
     image: "20.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -206,7 +206,7 @@ export default [
     image: "21.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -216,7 +216,7 @@ export default [
     image: "22.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "game",
   },
   {
@@ -226,7 +226,7 @@ export default [
     image: "23.png",
     colors: ["#0D2942"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "celebs",
   },
   {
@@ -236,7 +236,7 @@ export default [
     image: "24.png",
     colors: ["#D8520D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -246,7 +246,7 @@ export default [
     image: "25.png",
     colors: ["#FB7598"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -256,7 +256,7 @@ export default [
     image: "26.png",
     colors: ["#FA0022"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "cartoon",
   },
   {
@@ -266,7 +266,7 @@ export default [
     image: "27.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -276,7 +276,7 @@ export default [
     image: "28.png",
     colors: ["#E9DB56"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -286,7 +286,7 @@ export default [
     image: "29.png",
     colors: ["#FA0022"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -296,7 +296,7 @@ export default [
     image: "30.png",
     colors: ["#003929"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -306,7 +306,7 @@ export default [
     image: "31.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "game",
   },
   {
@@ -316,7 +316,7 @@ export default [
     image: "32.png",
     colors: ["#FB7598"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -326,7 +326,7 @@ export default [
     image: "33.png",
     colors: ["#2658B8"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -336,7 +336,7 @@ export default [
     image: "34.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -346,7 +346,7 @@ export default [
     image: "35.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "game",
   },
   {
@@ -356,7 +356,7 @@ export default [
     image: "36.png",
     colors: ["#2658B8"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "game",
   },
   {
@@ -366,7 +366,7 @@ export default [
     image: "37.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "movie",
   },
   {
@@ -376,7 +376,7 @@ export default [
     image: "38.png",
     colors: ["#524025"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "movie",
   },
   {
@@ -386,7 +386,7 @@ export default [
     image: "39.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "cartoon",
   },
   {
@@ -396,7 +396,7 @@ export default [
     image: "40.png",
     colors: ["#1D1E1D"],
     artist: "bremenelebis gammziebeli",
-    shipping: true,
+    freeShipping: true,
     category: "cartoon",
   },
   {
@@ -406,7 +406,7 @@ export default [
     image: "41.png",
     colors: ["#524025"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "movie",
   },
   {
@@ -416,7 +416,7 @@ export default [
     image: "42.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "game",
   },
   {
@@ -426,7 +426,7 @@ export default [
     image: "43.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "game",
   },
   {
@@ -436,7 +436,7 @@ export default [
     image: "44.png",
     colors: ["#524025"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "sport",
   },
   {
@@ -446,7 +446,7 @@ export default [
     image: "45.png",
     colors: ["#FB7598"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -456,7 +456,7 @@ export default [
     image: "46.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -466,7 +466,7 @@ export default [
     image: "47.png",
     colors: ["#5B489D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "military",
   },
   {
@@ -476,7 +476,7 @@ export default [
     image: "48.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "",
   },
   {
@@ -486,7 +486,7 @@ export default [
     image: "49.png",
     colors: ["#0D2942"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -496,7 +496,7 @@ export default [
     image: "50.png",
     colors: ["#D60027"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holly",
   },
   {
@@ -506,7 +506,7 @@ export default [
     image: "51.png",
     colors: ["#003929"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "ethno",
   },
   {
@@ -516,7 +516,7 @@ export default [
     image: "52.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "ethno",
   },
   {
@@ -526,7 +526,7 @@ export default [
     image: "53.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "ethno",
   },
   {
@@ -536,7 +536,7 @@ export default [
     image: "54.png",
     colors: ["#0D2942"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "ethno",
   },
   {
@@ -546,7 +546,7 @@ export default [
     image: "55.png",
     colors: ["#E9DB56"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "holly",
   },
   {
@@ -556,7 +556,7 @@ export default [
     image: "56.png",
     colors: ["#E9DB56"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "ethno",
   },
   {
@@ -566,7 +566,7 @@ export default [
     image: "57.png",
     colors: ["#003929"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "holly",
   },
   {
@@ -576,7 +576,7 @@ export default [
     image: "58.png",
     colors: ["#5B489D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "holly",
   },
   {
@@ -586,7 +586,7 @@ export default [
     image: "59.png",
     colors: ["#D8520D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "holly",
   },
   {
@@ -596,7 +596,7 @@ export default [
     image: "60.png",
     colors: ["#E9DB56"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "movie",
   },
   {
@@ -606,7 +606,7 @@ export default [
     image: "61.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "cartoon",
   },
   {
@@ -616,7 +616,7 @@ export default [
     image: "62.png",
     colors: ["#524025"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "literature",
   },
   {
@@ -626,7 +626,7 @@ export default [
     image: "63.png",
     colors: ["#D60027"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "celebs",
   },
   {
@@ -636,7 +636,7 @@ export default [
     image: "64.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "movie",
   },
   {
@@ -646,7 +646,7 @@ export default [
     image: "65.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "ethno",
   },
   {
@@ -656,7 +656,7 @@ export default [
     image: "66.png",
     colors: ["#0D2942"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "military",
   },
   {
@@ -666,7 +666,7 @@ export default [
     image: "67.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "movie",
   },
   {
@@ -676,7 +676,7 @@ export default [
     image: "68.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "ethno",
   },
   {
@@ -686,7 +686,7 @@ export default [
     image: "69.png",
     colors: ["#D60027"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "ethno",
   },
   {
@@ -696,7 +696,7 @@ export default [
     image: "70.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "ethno",
   },
   {
@@ -706,7 +706,7 @@ export default [
     image: "71.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "holy",
   },
   {
@@ -716,7 +716,7 @@ export default [
     image: "72.png",
     colors: ["#5B489D"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "music",
   },
   {
@@ -726,7 +726,7 @@ export default [
     image: "73.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: false,
+    freeShipping: false,
     category: "ethno",
   },
   {
@@ -736,7 +736,7 @@ export default [
     image: "74.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "chest",
   },
   {
@@ -746,7 +746,7 @@ export default [
     image: "75.png",
     colors: ["#FFF"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "chest",
   },
   {
@@ -756,7 +756,7 @@ export default [
     image: "76.png",
     colors: ["#00A1D1"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "chest",
   },
   {
@@ -764,9 +764,9 @@ export default [
     name: "Cucaracha, Georgian movie",
     price: 34,
     image: "77.png",
-    colors: ["#00A1D1"],
+    colors: ["#2658B8"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "movie",
   },
   {
@@ -776,7 +776,7 @@ export default [
     image: "78.png",
     colors: ["#524025"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "music",
   },
   {
@@ -786,7 +786,7 @@ export default [
     image: "79.png",
     colors: ["#1D1E1D"],
     artist: "tsotneforester",
-    shipping: true,
+    freeShipping: true,
     category: "chest",
   },
 ];

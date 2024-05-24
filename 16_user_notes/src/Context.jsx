@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { GlobalStyles } from "./styled";
-
-import styled, { ThemeProvider } from "styled-components";
-import { HashRouter, Route, Routes, Link } from "react-router-dom";
-
+import { GlobalStyles, root } from "./styled";
+const AppContext = React.createContext();
+import { ThemeProvider } from "styled-components";
+import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { noteSlice } from "./noteSlice.jsx";
@@ -17,14 +16,25 @@ const store = configureStore({
 });
 
 function Context({ children }) {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("darkTheme");
+    setIsDarkMode(storedTheme === "true");
+  }, []);
+
   return (
-    <Provider store={store}>
-      <HashRouter>
-        <GlobalStyles />
-        {children}
-      </HashRouter>
-    </Provider>
+    <AppContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+      <Provider store={store}>
+        <HashRouter>
+          <ThemeProvider theme={isDarkMode ? root.theme.dark : root.theme.light}>
+            <GlobalStyles />
+            {children}
+          </ThemeProvider>
+        </HashRouter>
+      </Provider>
+    </AppContext.Provider>
   );
 }
 
-export { Context };
+export { Context, AppContext };

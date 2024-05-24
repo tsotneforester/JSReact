@@ -1,15 +1,33 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { setShipping } from "../store";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function ShippingFilter() {
-  const dispatch = useDispatch();
-  const freeShipping = useSelector((state) => state.freeShipping);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  function handler(e) {
+    const checkboxStatus = e.target.checked;
+
+    const params = new URLSearchParams(searchParams);
+    if (!checkboxStatus) {
+      params.delete("free-shipping");
+      setSearchParams(params);
+      navigate(`/?${params.toString()}`);
+      return;
+    }
+
+    params.set("free-shipping", e.target.checked);
+    setSearchParams(params);
+    navigate(`/?${params.toString()}`);
+  }
+
+  const currentShippingStatus = searchParams.get("free-shipping") || false;
 
   return (
     <S.Container>
       <label htmlFor="ship">Free Shipping</label>
-      <input id="ship" type="checkbox" checked={freeShipping} onChange={() => dispatch(setShipping())} />
+      <input id="ship" type="checkbox" checked={Boolean(currentShippingStatus)} onChange={handler} />
     </S.Container>
   );
 }

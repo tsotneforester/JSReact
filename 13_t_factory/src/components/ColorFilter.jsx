@@ -2,30 +2,37 @@ import React from "react";
 import styled from "styled-components";
 import data from "../data";
 
-import { setColor } from "../store";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function ColorFilter() {
   const colors = [...new Set(data.map((e) => e.colors).flat())];
 
-  const dispatch = useDispatch();
-  const color = useSelector((state) => state.color);
-  const index = useSelector((state) => state.colorIndex);
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const currentCategory = searchParams.get("color") || "";
+
+  function handler(e) {
+    const params = new URLSearchParams(searchParams);
+    if (searchParams.get("color") == e) {
+      params.delete("color");
+      setSearchParams(params);
+      navigate(`/?${params.toString()}`);
+      return;
+    }
+
+    params.set("color", e);
+    setSearchParams(params);
+    navigate(`/?${params.toString()}`);
+  }
 
   return (
     <S.Container>
       <h1>Colors</h1>
       <S.Circles>
         {colors.map((e, i) => {
-          return (
-            <S.Circle
-              key={i}
-              onClick={() => {
-                dispatch(setColor({ color: e, index: i }));
-              }}
-              className={index == i ? "active" : undefined}
-              style={{ backgroundColor: e }}></S.Circle>
-          );
+          return <S.Circle key={i} onClick={() => handler(e)} className={currentCategory == e ? "active" : undefined} style={{ backgroundColor: e }}></S.Circle>;
         })}
       </S.Circles>
     </S.Container>

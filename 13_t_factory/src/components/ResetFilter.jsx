@@ -1,14 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { reset } from "../store";
+import { useNavigate } from "react-router-dom";
 
 function ResetFilter() {
-  const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   return (
     <S.Button
       onClick={() => {
-        dispatch(reset());
+        navigate({
+          pathname: "/",
+        });
       }}>
       Clear Filters
     </S.Button>
