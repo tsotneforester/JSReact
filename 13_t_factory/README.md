@@ -10,7 +10,7 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%203%20-intermediate-white?labelColor=f1b604" alt="" />
   <br/>
-  <a href="https://prismatic-dusk-fd0dcf.netlify.app/" target="_blank">🖥️ View Demo</a>
+  <a href="https://gpx.ge/jsreact/13_t_factory/dist/" target="_blank">🖥️ View Demo</a>
 
   </div>
 
