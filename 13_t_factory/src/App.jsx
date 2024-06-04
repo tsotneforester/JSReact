@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { root } from "./theme";
 import { ColorFilter, CategoryFilter, ShippingFilter, ResultsCountNSort, Products, ResetFilter, Modal } from "./components";
+import Paginator from "./components/Paginator";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <S.Result>
         <ResultsCountNSort />
         <Products />
+        <Paginator />
       </S.Result>
       <Modal />
     </>

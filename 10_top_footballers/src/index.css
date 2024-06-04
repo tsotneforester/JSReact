@@ -31,6 +31,10 @@ input::-ms-clear {
   display: none;
 }
 
+input {
+  min-width: 0;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -44,22 +48,11 @@ button::-moz-focus-inner {
 img {
   max-width: 100%;
   display: block;
+  min-width: 0;
 }
 
 ul li {
   list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
 }
 
 pre {
@@ -67,15 +60,20 @@ pre {
   margin: 0;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 #root {
+  background: #bababa;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
-  flex-direction: row;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

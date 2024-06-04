@@ -1,8 +1,9 @@
 import { useState } from "react";
 import data from "./data";
-import "./App.css";
-import Card from "./components/Card";
+
+import Person from "./components/Person";
 import Button from "./components/Button";
+import Card from "./components/Card";
 
 function App() {
   const [people, setPeople] = useState(data);
@@ -26,11 +27,12 @@ function App() {
   }
 
   return (
-    <main>
+    <Card>
       <h1>{people.length} Top Footballers</h1>
-      <Card people={people} handleOnDragEnd={handleOnDragEnd} />
+
+      <Person people={people} handleOnDragEnd={handleOnDragEnd} />
       <Button clickHandler={clickHandler} data={people} />
-    </main>
+    </Card>
   );
 }
 

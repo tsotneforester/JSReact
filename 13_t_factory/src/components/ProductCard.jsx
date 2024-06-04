@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import StoreSVG from "../assets/store.svg?react";
 import ExpandSVG from "../assets/expand.svg";
-
+import LazyImage from "./Lazy";
 import { setShowModal } from "../store";
 import { useDispatch } from "react-redux";
 
@@ -19,7 +19,9 @@ const ProductCard = ({ data }) => {
           onClick={() => {
             dispatch(setShowModal({ show: true, product: image }));
           }}>
-          <img src={`https://gpx.ge/root/img/tfactory/raw/${image}`} alt="name" />
+          <LazyImage placeholderSrc={`https://gpx.ge/root/img/tfactory/placeholder/${image}`} placeholderStyle={{ width: "100%" }} placeholderClassName="placeholderClassName" src={`https://gpx.ge/root/img/tfactory/raw/${image}`} alt="my-image" className="imageClassName" style={{ width: "100%" }} />
+
+          {/* <LazyLoadImage alt={name} height={"100%"} width={"100%"} threshold={-140} placeholderSrc={`https://gpx.ge/root/img/tfactory/placeholder/${image}`} src={`https://gpx.ge/root/img/tfactory/raw/${image}`} /> */}
 
           <div className="artist">
             <StoreIcon /> by {artist}

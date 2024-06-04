@@ -68,15 +68,13 @@ function Products() {
     }
   }, [filteredProducts]);
 
-  return displaydData.length > 0 ? (
-    <S.Container>
-      <Product data={displaydData}></Product>
-    </S.Container>
+  return data.length > 0 ? (
+    <img className="disconnected" src="./assets/disconnected.png" alt="disconnected" />
   ) : (
-    <>
-      <S.H1>Sorry, no products matched your search</S.H1>
-      <S.Image className="disconnected" src="./assets/disconnected.png" alt="disconnected" />
-    </>
+    // <S.Container>
+    //   <Product data={displaydData}></Product>
+    // </S.Container>
+    <S.H1>Sorry, no products matched your search</S.H1>
   );
 }
 
@@ -112,15 +110,13 @@ S.Container = styled.div`
     align-items: flex-start;
     grid-gap: 14px;
   }
+
+  .disconnected {
+    align-self: center;
+  }
 `;
 
 S.H1 = styled.h1`
   text-align: center;
   width: 100%;
-`;
-
-S.Image = styled.img`
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
 `;

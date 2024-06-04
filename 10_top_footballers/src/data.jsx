@@ -2,21 +2,21 @@ export default [
   {
     id: 1,
     name: "Kylian Mbappé",
-    image: "https://gpx.ge/root/img/footballers/kilian.jpg",
+    image: "./images/kilian.png",
   },
   {
     id: 2,
     name: "Erling Haaland",
-    image: "https://gpx.ge/root/img/footballers/erling.jpg",
+    image: "./images/erling.png",
   },
   {
     id: 3,
     name: "Khvicha Kvaratskhelia",
-    image: "https://gpx.ge/root/img/footballers/khvicha.jpg",
+    image: "./images/khvicha.png",
   },
   {
     id: 4,
     name: "Victor Osimhen",
-    image: "https://gpx.ge/root/img/footballers/victor.jpg",
+    image: "./images/victor.png",
   },
 ];

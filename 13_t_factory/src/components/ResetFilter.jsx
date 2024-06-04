@@ -1,14 +1,17 @@
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function ResetFilter() {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   return (
     <S.Button
       onClick={() => {
-        navigate({
-          pathname: "/",
-        });
+        setSearchParams({});
+        const params = new URLSearchParams({});
+        params.set("page", 1);
+        setSearchParams(params);
+        navigate(`/?${params.toString()}`);
       }}>
       Clear Filters
     </S.Button>
