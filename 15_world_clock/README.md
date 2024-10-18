@@ -3,7 +3,7 @@
 
 
 <!-- <div align="center">
-  <img src="https://gpx.ge/js/img/raw/1015_carousel.gif" alt="" />
+  <img src="https://geojs.one/js/img/raw/1015_carousel.gif" alt="" />
 </div> -->
 
   <div align="center">
@@ -13,7 +13,7 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%202%20-junior-white?labelColor=aad742" alt="" />
   <br/>
-    <a href="https://gpx.ge/jsreact/15_world_clock/dist/" target="_blank">🖥️ View Demo</a>
+    <a href="https://geojs.one/jsreact/15_world_clock/dist/" target="_blank">🖥️ View Demo</a>
 
     
 

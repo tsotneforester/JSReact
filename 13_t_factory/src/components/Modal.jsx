@@ -11,7 +11,7 @@ function Modal() {
     showModal && (
       <S.Container>
         <div className="overlay" onClick={() => dispatch(setShowModal({ show: false, product: null }))}></div>
-        <img src={`https://gpx.ge/root/img/tfactory/raw/${activeProduct}`} alt="" />
+        <img src={`https://geojs.one/root/img/tfactory/raw/${activeProduct}`} alt="" />
       </S.Container>
     )
   );

@@ -3,7 +3,7 @@
  <img src="https://github.com/tsotneforester/JSReact/assets/79293287/e61c7310-8afa-4e73-9ad7-eeb133583a1b" alt="logo"><br/>
 <h3 align="center">React Projects</h3>
   <div align="center">
-<a href="https://github.com/tsotneforester/JSVanilla/issues">🛠Submit Issue</a>
+<a href="https://github.com/tsotneforester/JSReact/issues">🛠Submit Issue</a>
   </div>
 <br/>
 

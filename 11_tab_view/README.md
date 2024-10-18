@@ -2,7 +2,7 @@
 
 
 <!-- <div align="center">
-  <img src="https://gpx.ge/js/img/raw/1015_carousel.gif" alt="" />
+  <img src="https://geojs.one/js/img/raw/1015_carousel.gif" alt="" />
 </div> -->
 
   <div align="center">
@@ -11,7 +11,7 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd" alt="" />
   <br/>
-  <a href="https://gpx.ge/jsreact/11_tab_view/dist/" target="_blank">🖥️ View Demo</a>
+  <a href="https://geojs.one/jsreact/11_tab_view/dist/" target="_blank">🖥️ View Demo</a>
 
     
 

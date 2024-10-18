@@ -3,7 +3,7 @@
 
 
 <!-- <div align="center">
-  <img src="https://gpx.ge/js/img/raw/1015_carousel.gif" alt="qr-code" />
+  <img src="https://geojs.one/js/img/raw/1015_carousel.gif" alt="qr-code" />
 </div> -->
 
   <div align="center">
@@ -12,7 +12,7 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd" alt="qr-code" />
   <br/>
-  <a href="https://gpx.ge/jsreact/03_star_track/dist/" target="_blank">🖥️ View Demo</a>
+  <a href="https://geojs.one/jsreact/03_star_track/dist/" target="_blank">🖥️ View Demo</a>
 
     
 
