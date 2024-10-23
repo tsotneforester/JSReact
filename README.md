@@ -13,7 +13,7 @@
 <h1 align="center"> About The Project </h1> 
 
 
-After first steps in Web Development (HTML+CSS), it was Javascript, which really drove my nuts, but now thing are getting better as experience growth. On my Js journey, I've come up to **React**, one of the best framworks that eased thing a great deal
+After first steps in Web Development (HTML+CSS), it was Javascript, which really drove my nuts, but now thing are getting better as experience growth. On my Js journey, I've come up to **React**, one of the best libraries that eased thing a great deal
 
 ## Getting Started
 
