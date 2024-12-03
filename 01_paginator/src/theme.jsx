@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const root = {
-  animationTime: "0.9s",
-  color: { modeToggler: "#272935", modeTogglerDot: "white", body: "#FFFFFF", text: "#394e6a", active: "#e2e8f4", bg: "#f0f6ff" },
+  animationTime: '0.9s',
+  color: { modeToggler: '#272935', modeTogglerDot: 'white', body: '#FFFFFF', text: '#394e6a', active: '#e2e8f4', bg: '#f0f6ff' },
   media: {
     tablet: 768,
   },

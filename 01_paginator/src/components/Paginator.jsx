@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import dateFormat from "dateformat";
-import { root } from "../theme";
+import { useState } from 'react';
+import styled, { css } from 'styled-components';
+import dateFormat from 'dateformat';
+import { root } from '../theme';
 
 function Paginator({ data, singlePageLines }) {
   let [activePage, setActivePage] = useState(1);
@@ -12,7 +12,7 @@ function Paginator({ data, singlePageLines }) {
     if (activePage == 1) {
       setActivePage(pageCount);
     } else {
-      setActivePage((e) => e - 1);
+      setActivePage(e => e - 1);
     }
   }
 
@@ -20,7 +20,7 @@ function Paginator({ data, singlePageLines }) {
     if (activePage == pageCount) {
       setActivePage(1);
     } else {
-      setActivePage((e) => e + 1);
+      setActivePage(e => e + 1);
     }
   }
 
@@ -44,7 +44,7 @@ function Paginator({ data, singlePageLines }) {
                   <td>{e.address}</td>
                   <td>{e.age}</td>
                   <td>{e.balance}</td>
-                  <td>{dateFormat(new Date(e.registered), "HH:MM TT - mmm dS, yyyy")}</td>
+                  <td>{dateFormat(new Date(e.registered), 'HH:MM TT - mmm dS, yyyy')}</td>
                 </tr>
               );
             })}
@@ -55,13 +55,13 @@ function Paginator({ data, singlePageLines }) {
           <h1>Total Orders : {data.length}</h1>
           <Controls>
             <Prev onClick={handlePrev}>Prev</Prev>
-            <FirstPage bg={activePage == 1 && "dark"} onClick={() => setActivePage(1)}>
+            <FirstPage bg={activePage == 1 && 'dark'} onClick={() => setActivePage(1)}>
               1
             </FirstPage>
-            {activePage == 1 ? "" : activePage == 2 ? <SecondPage bg={activePage == 2 && "dark"}>2</SecondPage> : <Dots />}
+            {activePage == 1 ? '' : activePage == 2 ? <SecondPage bg={activePage == 2 && 'dark'}>2</SecondPage> : <Dots />}
             {activePage > 2 && activePage < pageCount - 1 && <MiddlePage bg="dark">{activePage}</MiddlePage>}
-            {activePage == pageCount ? "" : activePage == pageCount - 1 ? <PreLastPage bg="dark">{pageCount - 1}</PreLastPage> : <Dots />}
-            <LastPage bg={activePage == pageCount && "dark"} onClick={() => setActivePage(pageCount)}>
+            {activePage == pageCount ? '' : activePage == pageCount - 1 ? <PreLastPage bg="dark">{pageCount - 1}</PreLastPage> : <Dots />}
+            <LastPage bg={activePage == pageCount && 'dark'} onClick={() => setActivePage(pageCount)}>
               {pageCount}
             </LastPage>
             <Next onClick={handleNext}>Next</Next>
@@ -83,7 +83,7 @@ let constants = {
   text: root.color.text,
   bg: root.color.bg,
   time: root.color.animationTime,
-  padding: "8px 12px",
+  padding: '8px 12px',
 };
 
 const defaultButton = css`
@@ -197,32 +197,32 @@ const Next = styled.button`
 
 const FirstPage = styled.button`
   ${defaultButton}
-  background-color: ${(prop) => (prop.bg == "dark" ? constants.active : constants.bg)};
-  font-weight: ${(prop) => (prop.bg == "dark" ? "bold" : "400")};
+  background-color: ${prop => (prop.bg == 'dark' ? constants.active : constants.bg)};
+  font-weight: ${prop => (prop.bg == 'dark' ? 'bold' : '400')};
 `;
 
 const SecondPage = styled.button`
   ${defaultButton}
-  background-color: ${(prop) => (prop.bg == "dark" ? constants.active : constants.bg)};
-  font-weight: ${(prop) => (prop.bg == "dark" ? "bold" : "400")};
+  background-color: ${prop => (prop.bg == 'dark' ? constants.active : constants.bg)};
+  font-weight: ${prop => (prop.bg == 'dark' ? 'bold' : '400')};
 `;
 
 const MiddlePage = styled.button`
   ${defaultButton}
-  background-color: ${(prop) => (prop.bg == "dark" ? constants.active : constants.bg)};
-  font-weight: ${(prop) => (prop.bg == "dark" ? "bold" : "400")};
+  background-color: ${prop => (prop.bg == 'dark' ? constants.active : constants.bg)};
+  font-weight: ${prop => (prop.bg == 'dark' ? 'bold' : '400')};
 `;
 
 const PreLastPage = styled.button`
   ${defaultButton}
-  background-color: ${(prop) => (prop.bg == "dark" ? constants.active : constants.bg)};
-  font-weight: ${(prop) => (prop.bg == "dark" ? "bold" : "400")};
+  background-color: ${prop => (prop.bg == 'dark' ? constants.active : constants.bg)};
+  font-weight: ${prop => (prop.bg == 'dark' ? 'bold' : '400')};
 `;
 
 const LastPage = styled.button`
   ${defaultButton}
-  background-color: ${(prop) => (prop.bg == "dark" ? constants.active : constants.bg)};
-  font-weight: ${(prop) => (prop.bg == "dark" ? "bold" : "400")};
+  background-color: ${prop => (prop.bg == 'dark' ? constants.active : constants.bg)};
+  font-weight: ${prop => (prop.bg == 'dark' ? 'bold' : '400')};
 `;
 
 const Dot = styled.button`
