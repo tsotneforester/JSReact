@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
-import styled from "styled-components";
-import { data } from "../data";
-import { FaAngleDoubleRight } from "react-icons/fa";
-import { LanguageContext } from "../Context";
+import { useState, useContext } from 'react';
+import styled from 'styled-components';
+import { data } from '../data';
+import { FaAngleDoubleRight } from 'react-icons/fa';
+import { LanguageContext } from '../Context';
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -15,11 +15,12 @@ const Content = () => {
         {data.map((item, i) => {
           return (
             <span
-              className={`link ${i === activeTab && "active"}`}
+              className={`link ${i === activeTab && 'active'}`}
               key={item.id}
               onClick={() => {
                 setActiveTab(i);
-              }}>
+              }}
+            >
               {item.company}
             </span>
           );

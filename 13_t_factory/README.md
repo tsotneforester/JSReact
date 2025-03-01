@@ -5,7 +5,8 @@
 </div> -->
 
   <div align="center">
-    Built With -  <img src="https://img.shields.io/badge/-React-f4cf0c" alt="" />
+    Built With - 
+    <img src="https://img.shields.io/badge/-React-f4cf0c" alt="" />
   
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%203%20-intermediate-white?labelColor=f1b604" alt="" />
@@ -14,9 +15,8 @@
 
   </div>
 
-<!-- https://img.shields.io/badge/-API-aad742 -->
-<!-- https://img.shields.io/badge/-Redux-DD5746 -->
-<!-- https://img.shields.io/badge/-Styled-A79277 -->
+<!-- https://img.shields.io/badge/-Vanilla-cf6390 -->
+<!-- https://img.shields.io/badge/-React-f4cf0c -->
 
 <!-- %201%20-newbie-white?labelColor=6abecd -->
 <!-- %202%20-junior-white?labelColor=aad742 -->

@@ -2,19 +2,19 @@
 //https://github.com/mozilla/language-mapping-list/blob/master/language-mapping-list.js
 export const data = [
   {
-    name: "english",
-    code: "gb",
+    name: 'english',
+    code: 'gb',
   },
   {
-    name: "Español",
-    code: "es",
+    name: 'Español',
+    code: 'es',
   },
   {
-    name: "ქართული",
-    code: "ge",
+    name: 'ქართული',
+    code: 'ge',
   },
   {
-    name: "Français",
-    code: "fr",
+    name: 'Français',
+    code: 'fr',
   },
 ];
