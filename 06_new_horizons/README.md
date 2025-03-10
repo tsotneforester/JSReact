@@ -1,9 +1,9 @@
-<h1 align="center">Mytube</h1>
+<h1 align="center">New Horizons</h1>
 
-<!-- <div align="center">
+<div align="center">
   <img src="./design/preview.jpg" alt="qr-code" />
 </div>
- -->
+
 
   <div align="center">
     Built With - 
@@ -12,9 +12,8 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%202%20-junior-white?labelColor=aad742" alt="qr-code" />
   <br/>
-  <a href="https://geojs.one/jsreact/05_mytube/dist/" target="_blank">🖥️ View Demo</a>
+  <a href="https://geojs.one/jsreact/06_new_horizons/dist/" target="_blank">🖥️ View Demo</a>
 
-  
   </div>
 
 <!-- https://img.shields.io/badge/-Vanilla-cf6390 -->
@@ -25,4 +24,3 @@
 <!-- %203%20-intermediate-white?labelColor=f1b604 -->
 <!-- %204%20-advanced-white?labelColor=bf4605 -->
 <!-- %205%20-guru-white?labelColor=ed2c49 -->
-

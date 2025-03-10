@@ -1,10 +1,9 @@
 <h1 align="center">Read More</h1>
 
-
-
 <!-- <div align="center">
-  <img src="https://geojs.one/js/img/raw/1015_carousel.gif" alt="" />
-</div> -->
+  <img src="./design/preview.jpg" alt="qr-code" />
+</div>
+ -->
 
   <div align="center">
     Built With - 

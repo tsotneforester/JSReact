@@ -1,9 +1,9 @@
 <h1 align="center">White Tank</h1>
 
 <!-- <div align="center">
-  <img src="https://geojs.one/js/img/raw/1015_carousel.gif" alt="qr-code" />
-</div> -->
-
+  <img src="./design/preview.jpg" alt="qr-code" />
+</div>
+ -->
   <div align="center">
     Built With -  <img src="https://img.shields.io/badge/-React-f4cf0c" alt="qr-code" />
   
