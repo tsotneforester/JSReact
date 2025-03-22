@@ -11,7 +11,7 @@
   <br/>
     Difficulty - <img src="https://img.shields.io/badge/%201%20-newbie-white?labelColor=6abecd" alt="newbie" />
   <br/>
-  <a href="https://geojs.one/jsreact/12_advanced_accordion/dist/" target="_blank">🖥️ View Demo</a>
+  <a href="https://advanced-accordion-geojsone.netlify.app" target="_blank">🖥️ View Demo</a>
 
   </div>
 
